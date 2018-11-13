@@ -11,18 +11,18 @@ export const hey = (message) => {
     case 3:
       return answers[3];
     case 4:
-      return ansers[4];
+      return answers[4];
   }
 };
 
 let sayingResult = (message) => {
-  if(message == message.toUpperCase() && message.includes("?")) {
+  if(message == message.toUpperCase() && message.includes("?") && /[a-zA-Z]/.test(message)) {
     return 3;
-  } else if(message == message.toUpperCase()) {
+  } else if(message == message.toUpperCase() && /[a-zA-Z]/.test(message)) {
     return 1;
-  } else if (message.includes("?") && message[message.length -1] == "?") {
+  } else if (message[message.length -1] == "?") {
     return 2;
-  } else if (message == "") {
+  } else if (message == "" || message.includes("  ")) {
     return 4;
   } else {
     return 0;

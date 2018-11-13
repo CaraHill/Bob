@@ -31,67 +31,67 @@ describe('Bob', () => {
     expect(result).toEqual('Sure.');
   });
 
-  xtest('talking forcefully', () => {
+  test('talking forcefully', () => {
     const result = hey("Let's go make out behind the gym!");
     expect(result).toEqual('Whatever.');
   });
 
-  xtest('using acronyms in regular speech', () => {
+  test('using acronyms in regular speech', () => {
     const result = hey("It's OK if you don't want to go to the DMV.");
     expect(result).toEqual('Whatever.');
   });
 
-  xtest('forceful question', () => {
+  test('forceful question', () => {
     const result = hey('WHAT THE HELL WERE YOU THINKING?');
     expect(result).toEqual('Calm down, I know what I\'m doing!');
   });
 
-  xtest('shouting numbers', () => {
+  test('shouting numbers', () => {
     const result = hey('1, 2, 3 GO!');
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  xtest('only numbers', () => {
+  test('only numbers', () => {
     const result = hey('1, 2, 3');
     expect(result).toEqual('Whatever.');
   });
 
-  xtest('question with only numbers', () => {
+  test('question with only numbers', () => {
     const result = hey('4?');
     expect(result).toEqual('Sure.');
   });
 
-  xtest('shouting with special characters', () => {
+  test('shouting with special characters', () => {
     const result = hey('ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!');
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  xtest('shouting with no exclamation mark', () => {
+  test('shouting with no exclamation mark', () => {
     const result = hey('I HATE YOU');
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  xtest('statement containing question mark', () => {
+  test('statement containing question mark', () => {
     const result = hey('Ending with a ? means a question.');
     expect(result).toEqual('Whatever.');
   });
 
-  xtest('non-letters with question', () => {
+  test('non-letters with question', () => {
     const result = hey(':) ?');
     expect(result).toEqual('Sure.');
   });
 
-  xtest('prattling on', () => {
+  test('prattling on', () => {
     const result = hey('Wait! Hang on. Are you going to be OK?');
     expect(result).toEqual('Sure.');
   });
 
-  xtest('silence', () => {
+  test('silence', () => {
     const result = hey('');
     expect(result).toEqual('Fine. Be that way!');
   });
 
-  xtest('prolonged silence', () => {
+  test('prolonged silence', () => {
     const result = hey('          ');
     expect(result).toEqual('Fine. Be that way!');
   });
