@@ -1,20 +1,9 @@
-export const hey = (message) => {
-  let answers = ["Whatever.", "Whoa, chill out!", "Sure.", "Calm down, I know what I'm doing!", "Fine. Be that way!"];
+const answers = ["Whatever.", "Whoa, chill out!", "Sure.", "Calm down, I know what I'm doing!", "Fine. Be that way!"];
 
+export const hey = (message) => {
   let newMessage = message.replace(/\s+$/, '');
 
-  switch(sayingResult(newMessage)) {
-    case 0:
-      return answers[0];
-    case 1:
-      return answers[1];
-    case 2:
-      return answers[2];
-    case 3:
-      return answers[3];
-    case 4:
-      return answers[4];
-  }
+  return answers[sayingResult(newMessage)];
 };
 
 let sayingResult = (message) => {
