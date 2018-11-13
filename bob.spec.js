@@ -6,27 +6,27 @@ describe('Bob', () => {
     expect(result).toEqual('Whatever.');
   });
 
-  xtest('shouting', () => {
+  test('shouting', () => {
     const result = hey('WATCH OUT!');
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  xtest('shouting gibberish', () => {
+  test('shouting gibberish', () => {
     const result = hey('FCECDFCAAB');
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  xtest('asking a question', () => {
+  test('asking a question', () => {
     const result = hey('Does this cryogenic chamber make me look fat?');
     expect(result).toEqual('Sure.');
   });
 
-  xtest('asking a numeric question', () => {
+  test('asking a numeric question', () => {
     const result = hey('You are, what, like 15?');
     expect(result).toEqual('Sure.');
   });
 
-  xtest('asking gibberish', () => {
+  test('asking gibberish', () => {
     const result = hey('fffbbcbeab?');
     expect(result).toEqual('Sure.');
   });
